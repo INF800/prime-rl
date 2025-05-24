@@ -1,7 +1,7 @@
 from typing import Dict
 
 from zeroband.inference.genesys.literature_source_retrieval_utils import (
-    weighted_literate_source_reward,
+    weighted_literature_source_reward,
     extract_literature_info,
     calc_literature_similarity,
     calc_genere_similarity,
@@ -54,7 +54,7 @@ def compute_literature_source_retrieval_reward(
 
     # Weighted scoring
     weights = [0.6, 0.1, 0.15, 0.1, 0.5]
-    reward = weighted_literate_source_reward(
+    reward = weighted_literature_source_reward(
         [lit_sim, gnr_sim, wrt_sim, chp_sim, vrs_sim],
         weights,
     )
